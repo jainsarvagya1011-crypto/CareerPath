@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerPath | AI Career Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#" class="logo" onclick="showPage('home')">
+    <span class="logo-icon">✦</span> CareerPath
+  </a>
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('explore')">Explore Careers</a>
+    <a href="#" onclick="showPage('assessment')">Career Test</a>
+    <a href="#" onclick="showPage('about')">About</a>
+  </nav>
+  <button class="nav-btn" onclick="showPage('assessment')">Get Started ↗</button>
+</header>
+
+<main>
+
+<!-- HOME PAGE -->
+<section id="home" class="page active">
+  <div class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">✦ YOUR FUTURE STARTS HERE</span>
+      <h1>Discover Your Potential.<br><span>Design Your Future.</span></h1>
+      <p>Confused about your career? Explore opportunities, understand your strengths and discover a career path that matches your interests.</p>
+      <div class="hero-buttons">
+        <button class="primary-btn" onclick="showPage('assessment')">Take Career Test →</button>
+        <button class="secondary-btn" onclick="showPage('explore')">Explore Careers</button>
+      </div>
+      <div class="hero-note">✦ Explore possibilities · Build skills · Shape your future</div>
+    </div>
+
+    <div class="hero-art">
+      <div class="art-circle circle-one"></div>
+      <div class="art-circle circle-two"></div>
+      <div class="art-card main-art-card">
+        <div class="art-icon">🚀</div>
+        <h3>Your Future</h3>
+        <p>Starts with one decision.</p>
+        <div class="art-progress"><span></span></div>
+        <small>Explore your potential</small>
+      </div>
+      <div class="floating-card floating-one">💡 Find your passion</div>
+      <div class="floating-card floating-two">🎯 Set your goals</div>
+      <div class="floating-card floating-three">🌱 Grow your skills</div>
+    </div>
+  </div>
+
+  <section class="features section-wrap">
+    <div class="section-heading">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2>Your Career Journey, Simplified</h2>
+      <p>Everything you need to make informed career decisions.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card pastel-purple">
+        <div class="feature-icon">🧭</div>
+        <h3>Explore Careers</h3>
+        <p>Discover different career paths and understand what each field offers.</p>
+      </div>
+      <div class="feature-card pastel-peach">
+        <div class="feature-icon">🧠</div>
+        <h3>Know Yourself</h3>
+        <p>Understand your interests, strengths and preferred working style.</p>
+      </div>
+      <div class="feature-card pastel-blue">
+        <div class="feature-icon">✨</div>
+        <h3>Get Suggestions</h3>
+        <p>Explore career suggestions based on your selected preferences.</p>
+      </div>
+      <div class="feature-card pastel-green">
+        <div class="feature-icon">📈</div>
+        <h3>Build Your Future</h3>
+        <p>Follow a learning roadmap and develop relevant career skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-cta">
+    <span class="eyebrow">READY TO BEGIN?</span>
+    <h2>Your next chapter begins with a choice.</h2>
+    <p>Take the first step towards understanding your career possibilities.</p>
+    <button class="primary-btn" onclick="showPage('assessment')">Discover My Career →</button>
+  </section>
+</section>
+
+<!-- EXPLORE CAREERS -->
+<section id="explore" class="page section-wrap">
+  <div class="section-heading">
+    <span class="eyebrow">EXPLORE POSSIBILITIES</span>
+    <h1>Find Your Career Direction</h1>
+    <p>Explore different professional fields and discover what interests you.</p>
+  </div>
+
+  <div class="career-search">
+    <span>⌕</span>
+    <input type="text" id="careerSearch" placeholder="Search careers..." oninput="filterCareers()">
+  </div>
+
+  <div class="career-grid" id="careerGrid">
+    <article class="career-card pastel-purple" onclick="showCareerDetails('Software Developer')">
+      <div class="career-icon">💻</div>
+      <span class="career-category">TECHNOLOGY</span>
+      <h3>Software Developer</h3>
+      <p>Build applications, websites and software that solve real-world problems.</p>
+      <span class="card-link">Explore Career ↗</span>
+    </article>
+
+    <article class="career-card pastel-peach" onclick="showCareerDetails('UI/UX Designer')">
+      <div class="career-icon">🎨</div>
+      <span class="career-category">DESIGN</span>
+      <h3>UI/UX Designer</h3>
+      <p>Create beautiful and user-friendly digital experiences.</p>
+      <span class="card-link">Explore Career ↗</span>
+    </article>
+
+    <article class="career-card pastel-blue" onclick="showCareerDetails('Business Analyst')">
+      <div class="career-icon">📊</div>
+      <span class="career-category">BUSINESS</span>
+      <h3>Business Analyst</h3>
+      <p>Use data and research to help organisations make decisions.</p>
+      <span class="card-link">Explore Career ↗</span>
+    </article>
+
+    <article class="career-card pastel-green" onclick="showCareerDetails('Data Scientist')">
+      <div class="career-icon">📈</div>
+      <span class="career-category">DATA & AI</span>
+      <h3>Data Scientist</h3>
+      <p>Discover patterns and insights using data and machine learning.</p>
+      <span class="card-link">Explore Career ↗</span>
+    </article>
+
+    <article class="career-card pastel-yellow" onclick="showCareerDetails('Financial Analyst')">
+      <div class="career-icon">💰</div>
+      <span class="career-category">FINANCE</span>
+      <h3>Financial Analyst</h3>
+      <p>Understand financial information and support business decisions.</p>
+      <span class="card-link">Explore Career ↗</span>
+    </article>
+
+    <article class="career-card pastel-pink" onclick="showCareerDetails('Content Strategist')">
+      <div class="career-icon">✍️</div>
+      <span class="career-category">COMMUNICATION</span>
+      <h3>Content Strategist</h3>
+      <p>Plan creative content and build meaningful brand communication.</p>
+      <span class="card-link">Explore Career ↗</span>
+    </article>
+  </div>
+  <p id="noCareers" class="no-results" style="display:none;">No careers found. Try another search.</p>
+</section>
+
+<!-- CAREER TEST -->
+<section id="assessment" class="page section-wrap">
+  <div class="section-heading">
+    <span class="eyebrow">SELF DISCOVERY</span>
+    <h1>Let's Find Your Direction</h1>
+    <p>Answer these questions to explore career options matching your preferences.</p>
+  </div>
+
+  <form id="careerForm" class="assessment-form">
+    <div class="form-group">
+      <label>1. What is your current education level?</label>
+      <select id="education" required>
+        <option value="">Select education</option>
+        <option>School Student</option>
+        <option>12th Pass</option>
+        <option>Undergraduate</option>
+        <option>Graduate</option>
+        <option>Postgraduate</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>2. Which area interests you most?</label>
+      <select id="interest" required>
+        <option value="">Select your interest</option>
+        <option value="technology">Technology & Programming</option>
+        <option value="design">Design & Creativity</option>
+        <option value="business">Business & Management</option>
+        <option value="data">Mathematics & Data</option>
+        <option value="finance">Finance & Economics</option>
+        <option value="communication">Writing & Communication</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>3. What is your strongest skill?</label>
+      <select id="skill" required>
+        <option value="">Select a skill</option>
+        <option value="logic">Logical Thinking</option>
+        <option value="creative">Creativity</option>
+        <option value="analytical">Analytical Thinking</option>
+        <option value="communication">Communication</option>
+        <option value="numbers">Working with Numbers</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>4. What type of work do you prefer?</label>
+      <select id="work" required>
+        <option value="">Select preference</option>
+        <option value="independent">Independent Work</option>
+        <option value="team">Team Collaboration</option>
+        <option value="creative">Creative Projects</option>
+        <option value="analytical">Research & Analysis</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>5. What is your main career goal?</label>
+      <select id="goal" required>
+        <option value="">Select your goal</option>
+        <option value="technology">Build Technology</option>
+        <option value="creative">Create New Things</option>
+        <option value="business">Lead a Business</option>
+        <option value="research">Research & Innovation</option>
+        <option value="finance">Financial Growth</option>
+      </select>
+    </div>
+
+    <button type="submit" class="primary-btn full-btn">Generate My Career Suggestions →</button>
+  </form>
+</section>
+
+<!-- RESULTS PAGE -->
+<section id="results" class="page section-wrap">
+  <div class="section-heading">
+    <span class="eyebrow">YOUR CAREER REPORT</span>
+    <h1>Career Suggestions</h1>
+    <p>Here are some career paths based on your selected preferences.</p>
+  </div>
+  <div id="resultsContent"></div>
+  <button class="secondary-btn" onclick="showPage('assessment')">Retake Career Test</button>
+  <button class="primary-btn" onclick="showPage('explore')">Explore All Careers</button>
+</section>
+
+<!-- ABOUT PAGE -->
+<section id="about" class="page section-wrap">
+  <div class="section-heading">
+    <span class="eyebrow">ABOUT CAREERPATH</span>
+    <h1>Making Career Choices Simpler</h1>
+    <p>CareerPath is a student-focused career exploration platform designed to help learners understand their interests and explore professional opportunities.</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-card pastel-purple">
+      <div class="feature-icon">🎯</div>
+      <h3>Our Mission</h3>
+      <p>To make career information easier to understand and help students explore possibilities with confidence.</p>
+    </div>
+    <div class="about-card pastel-blue">
+      <div class="feature-icon">🌱</div>
+      <h3>Our Vision</h3>
+      <p>To encourage informed career decisions through exploration, self-awareness and continuous learning.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-logo">✦ CareerPath</div>
+  <p>Discover Your Potential. Design Your Future.</p>
+  <small>© 2026 CareerPath. Educational career exploration platform.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
